@@ -10,7 +10,8 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "lint:fix": "eslint . --fix --ext .js,.jsx,.ts,.tsx",
     "prepare": "husky install",
-    "prettier": "prettier . --write"
+    "prettier": "prettier . --write",
+    "test": "vitest src"
   },
   "repository": {
     "type": "git",

@@ -10,7 +10,10 @@ export const isCSSRequest = (request: string): boolean =>
 export const getRelativePath = (
   from: string | undefined,
   to: string | undefined
-) => path.relative(path.dirname(from || ''), path.dirname(to || '')) || './'
+) =>
+  (
+    path.relative(path.dirname(from || ''), path.dirname(to || '')) || './'
+  ).replace(/([^/])$/, '$1/')
 
 export const toDashCase = (target: string) =>
   target
